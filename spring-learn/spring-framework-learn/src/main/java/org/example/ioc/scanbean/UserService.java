@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    public void sayHello() {
-        log.info("hello");
+    public String getUserName() {
+        return "user";
     }
 }

@@ -8,8 +8,8 @@ public class LifeBeanMain {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(LifeBeanConfig.class);
-        AnnoLifeBean annoLifeBean = context.getBean(AnnoLifeBean.class);
-        log.info(annoLifeBean.sayHello());
+        LifeBean lifeBean = context.getBean(LifeBean.class);
+        log.info(lifeBean.sayHello());
         context.close();
     }
 }
