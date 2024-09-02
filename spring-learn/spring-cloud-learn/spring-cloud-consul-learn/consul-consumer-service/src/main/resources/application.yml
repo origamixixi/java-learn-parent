@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consul-consumer-service
+  config:
+    import: consul://localhost:8500
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+        serviceName: ${spring.application.name}
+        healthCheckEnabled: true
+      config:
+        profile-separator: '-'
+        format: YAML
