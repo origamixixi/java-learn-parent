@@ -65,12 +65,13 @@
             <version>${tomcat.version}</version>
         </dependency>
 
-         <!--spring jdbc-->
+         <!--spring jdbc & tx-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <!--h2database-->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
