@@ -8,20 +8,20 @@
             http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--无参构造函数-->
-    <bean id="noArgsConstructorBean" class="org.example.ioc.xmlbean.NoArgsConstructorBean" />
+    <bean id="noArgsConstructorBean" class="org.example.core.ioc.xmlbean.NoArgsConstructorBean" />
 
     <!--有参构造函数-->
-    <bean id="argsConstructorBean" class="org.example.ioc.xmlbean.ArgsConstructorBean" >
+    <bean id="argsConstructorBean" class="org.example.core.ioc.xmlbean.ArgsConstructorBean" >
         <constructor-arg name="noArgsConstructorBean" ref="noArgsConstructorBean"/>
     </bean>
 
     <!--静态工厂方法-->
-    <bean id="staticFactoryBean" class="org.example.ioc.xmlbean.StaticFactory" factory-method="createInstance" />
+    <bean id="staticFactoryBean" class="org.example.core.ioc.xmlbean.StaticFactory" factory-method="createInstance" />
 
     <!--动态工厂方法-->
-    <bean id="dynamicFactory" class="org.example.ioc.xmlbean.DynamicFactory"/>
-    <bean id="dynamicFactoryBean" class="org.example.ioc.xmlbean.DynamicFactory.DynamicFactoryBean" factory-bean="dynamicFactory" factory-method="createInstance" />
+    <bean id="dynamicFactory" class="org.example.core.ioc.xmlbean.DynamicFactory"/>
+    <bean id="dynamicFactoryBean" class="org.example.core.ioc.xmlbean.DynamicFactory.DynamicFactoryBean" factory-bean="dynamicFactory" factory-method="createInstance" />
 
     <!--Factory bean-->
-    <bean id="exampleBean" class="org.example.ioc.xmlbean.ExampleFactoryBean" />
+    <bean id="exampleBean" class="org.example.core.ioc.xmlbean.ExampleFactoryBean" />
 </beans>
