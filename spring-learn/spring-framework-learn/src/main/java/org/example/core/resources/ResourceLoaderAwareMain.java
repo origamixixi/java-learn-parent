@@ -27,7 +27,7 @@ public class ResourceLoaderAwareMain {
         }
     }
 
-    class InnerClass implements ResourceLoaderAware {
+    static class InnerClass implements ResourceLoaderAware {
 
         private ResourceLoader resourceLoader;
 
